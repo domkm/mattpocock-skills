@@ -14,6 +14,7 @@ Claude Code installs from its official marketplace, `claude-plugins-official`. E
 | Codex         | `@mattpocock` marketplace        | Yes, at startup, by default                                      |
 | Copilot CLI   | `@mattpocock` marketplace        | Yes, after a one-time `autoUpdate: true`                         |
 | VS Code       | Chat: Install Plugin From Source | Yes, daily, by default                                           |
+| OpenCode V2   | Git-backed package plugin       | No. Use `opencode plugin check` and `opencode plugin update`      |
 | Gemini CLI    | `gemini skills install` (copies) | No. A Gemini extension would need a flat `skills/<name>/` layout |
 | Everyone else | skills.sh                        | No. Run `npx skills update`, and re-run `add` for new skills     |
 
@@ -83,6 +84,23 @@ gemini skills install https://github.com/mattpocock/skills.git --path skills/pro
 ```
 
 Re-run both commands to update.
+
+</canonical-block>
+
+## OpenCode V2
+
+<canonical-block name="opencode">
+
+```bash
+opencode plugin add github:mattpocock/skills#main
+```
+
+OpenCode checks for updates, but does not apply them automatically. Use its package manager:
+
+```bash
+opencode plugin check github:mattpocock/skills#main
+opencode plugin update github:mattpocock/skills#main
+```
 
 </canonical-block>
 

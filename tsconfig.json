@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ES2022",
+    "types": ["node"],
+    "skipLibCheck": true
+  },
+  "include": ["opencode/**/*.mjs", "tests/plugin.test.mjs", "tests/package.mjs"]
+}

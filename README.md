@@ -24,7 +24,7 @@ If you want to keep up with changes to these skills, and any new ones I create, 
 
 ## Installation (30-second setup)
 
-A plugin updates itself. [skills.sh](https://skills.sh/mattpocock/skills) copies editable files into your project, and you update them by hand. Pick one per agent, because installing both gives you every skill twice.
+Plugin updates depend on the agent. [skills.sh](https://skills.sh/mattpocock/skills) copies editable files into your project, and you update them by hand. Pick one per agent, because installing both gives you every skill twice.
 
 ### 1. Get the skills
 
@@ -70,6 +70,24 @@ Then, once, add to `~/.copilot/settings.json`:
 ```
 
 In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.com/mattpocock/skills`. It updates daily.
+
+</details>
+
+<details>
+<summary><strong>OpenCode V2</strong> (manual updates)</summary>
+
+```bash
+opencode plugin add github:mattpocock/skills#main
+```
+
+OpenCode checks for updates, but does not apply them automatically. Use its package manager:
+
+```bash
+opencode plugin check github:mattpocock/skills#main
+opencode plugin update github:mattpocock/skills#main
+```
+
+See [OpenCode development and local loading](./opencode/README.md) to use a local checkout.
 
 </details>
 
